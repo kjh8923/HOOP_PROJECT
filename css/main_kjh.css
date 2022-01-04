@@ -20,16 +20,16 @@ body {
 /*----------HEADER-----------*/
 header {
   height: 100px;
-  width: 1600px;
+  width: 1900px;
   /* border: solid red 5px; */
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   background-color: white;
   position: fixed;
-  top: 0;
   left: 0;
   right: 0;
+  top: 0;
 }
 
 header > .left {
@@ -47,6 +47,8 @@ header > .left > .logo {
 header > .left > .menu {
   /* border: solid blue 3px; */
   margin: auto 0;
+  text-align: center;
+  line-height: 1;
 }
 
 header > .left > .menu > ul {
@@ -56,10 +58,25 @@ header > .left > .menu > ul {
 header > .left > .menu > ul > li {
   /* border: solid blue 1px; */
   margin: 0 13px;
+  width: 125px;
+  vertical-align: top;
 }
 
 header > .left > .menu > ul > li > a {
   font-size: 15px;
+}
+
+header > .left > .menu > ul > li > .submenu {
+  width: 125px;
+  line-height: 40px;
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  transform: translate(0, 1em);
+}
+
+header > .left > .menu > ul > li:hover > .submenu {
+  display: block;
 }
 
 header > .right {
@@ -86,29 +103,136 @@ header > .right > ul > li > a > img {
   height: 25px;
 }
 
-.menu > ul > li {
-  vertical-align: top;
-}
-
-.menu > ul > li:hover > .submenu {
-  display: block;
-}
-
-.menu {
-  text-align: center;
-  line-height: 1;
-}
-.submenu {
-  width: 50;
-  line-height: 40px;
-  display: none;
-  position: absolute;
-  background-color: #ffffff;
-  transform: translate(0, 1em);
-}
-
 /*----------HEADER-----------*/
 
 /*----------SECTION SLIDE-----------*/
+.imgslide {
+  margin-top: 100px;
+}
 
-/*----------SECTION Shoes-----------*/
+.imgslide > img {
+  width: 1900px;
+  height: 779px;
+}
+/*----------SECTION SLIDE-----------*/
+
+/*----------SECTION NEWARRIVAL-----------*/
+.NEWARRIVAL {
+  width: 1900px;
+  margin: 0 auto;
+}
+
+.NEWARRIVAL > .line {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 0;
+}
+
+.NEWARRIVAL > .line > h1 {
+  margin-top: 30px;
+  font-size: 30px;
+  color: #555;
+}
+
+.NEWARRIVAL > ul > li > .shoeslist {
+  width: 1900px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.NEWARRIVAL > ul > li > .shoeslist > .shoesimg {
+  text-align: center;
+  float: left;
+  width: 25%;
+}
+
+.NEWARRIVAL > ul > li > .shoeslist > .shoesimg > img {
+  display: block;
+  margin: 0px auto;
+  width: 300px;
+  height: 300px;
+}
+
+.NEWARRIVAL > ul > li > .shoeslist > .shoesimg > h3 {
+  color: #7a000c;
+  font-size: 15px;
+}
+
+/*----------SECTION NEWARRIVAL-----------*/
+
+/* ------------MID_BANNER------------------- */
+
+.mid_banner {
+  width: 1900px;
+  margin: 0 auto;
+}
+
+.mid_banner > img {
+  width: 1900px;
+  height: 779px;
+}
+
+/* ------------MID_BANNER------------------- */
+
+/* --------------BESTITEM----------------- */
+
+.BESTITEM {
+  width: 1900px;
+  margin: 0 auto;
+}
+
+.BESTITEM > .line {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 0;
+}
+
+.BESTITEM > .line > h1 {
+  margin-top: 30px;
+  font-size: 30px;
+  color: #555;
+}
+
+.BESTITEM > ul > li > .wearlist {
+  width: 1900px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.BESTITEM > ul > li > .wearlist > .wearimg {
+  text-align: center;
+  float: left;
+  width: 25%;
+}
+
+.BESTITEM > ul > li > .wearlist > .wearimg > img {
+  display: block;
+  margin: 0px auto;
+  width: 300px;
+  height: 300px;
+}
+
+.BESTITEM > ul > li > .wearlist > .wearimg > h3 {
+  color: #7a000c;
+  font-size: 15px;
+}
+
+/* --------------BESTITEM----------------- */
+
+/* --------------gallery----------------- */
+
+.gallery {
+  width: 1900px;
+  margin: 0 auto;
+}
+
+.gallery > .line {
+  text-align: center;
+}
+
+.gallery > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* --------------gallery----------------- */
