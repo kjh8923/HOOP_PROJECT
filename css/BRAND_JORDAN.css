@@ -1,0 +1,378 @@
+@charset "UTF-8";
+@import url("http://fonts.googleapis.com/earlyaccess/notosanskr.css");
+@import url("http://fonts.googleapis.com/earlyaccess/lato.css");
+@import url("http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css");
+
+/*--------------------- css reset start ---------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  color: #222328;
+  text-decoration: none;
+}
+/*--------------------- css reset end ---------------------*/
+
+body {
+  font-family: "Noto Sans KR", "Lato", "Spoqa Han Sans", sans-serif;
+}
+
+/*--------------------- header start ---------------------*/
+header {
+  width: 1600px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  text-align: center;
+  position: fixed;
+  background-color: white;
+  font-family: "Spoqa Han Sans Neo", "Noto Sans KR", "Lato", sans-serif;
+  font-weight: 400;
+  box-shadow: 0 0 3px 0 rgb(0 0 0 / 20%); /* 박스 전체에 그림자 넣기 */
+  z-index: 3;
+}
+
+/* div top IN : logo , menu , right_menu */
+header > .top {
+  display: flex; /* 순서대로 이어서 왼쪽 정렬 */
+  height: 100px;
+}
+
+/* logo : width 200px */
+header > .top > .logo {
+  width: 200px;
+  line-height: 100px;
+}
+
+header > .top > .logo > a > img {
+  vertical-align: middle; /* vertical-align으로 logo img 수직 가운데 정렬 */
+}
+
+/* menu : NEW ARRIVAL ~ SALE ul 8개 */
+header > .top > .menu {
+  width: 1100px;
+  display: flex; /* ul list 순서대로 왼쪽 정렬 */
+}
+
+header > .top > .menu > ul > .left_menu {
+  width: 100px; /* 메뉴 한 칸당 100px 지정 */
+  font-size: 12.5px; /* font : 12px */
+}
+
+header > .top > .menu > ul > .left_menu > a {
+  line-height: 100px;
+  position: relative;
+}
+
+header > .top > .menu > ul > .left_menu > .submenu {
+  display: none; /* 기본 값은 안보이게 하기 */
+  align-items: center;
+  background-color: white; /* submenu 배경색 넣기 */
+  width: 150px; /* submenu 넓이 지정 (글씨 긴것도 다 보이게끔 크게 지정) */
+  position: relative;
+  top: -30px;
+  left: -25px; /* left_menu와 submenu 중앙 맞추기 */
+  box-shadow: 0 5px 10px 0 rgb(0 0 0 / 20%); /* submenu에 그림자 넣기 */
+}
+
+header > .top > .menu > ul > .left_menu:hover > .submenu {
+  display: block; /* block(리스트)형태로 보이게 하기 */
+}
+
+header > .top > .menu > ul > .left_menu > .submenu > li {
+  height: 40px; /* 한 칸당 높이 40px 지정 */
+  line-height: 40px; /* 텍스트 세로 중앙 정렬을 위한 line-height 설정*/
+  font-size: 12px; /* font : 12px */
+}
+
+header > .top > .menu > ul > .left_menu > .submenu > li > a {
+  text-decoration-line: none; /* link 포함된 a tag 폰트 서식 없애기(밑줄) */
+}
+
+header > .top > .menu > ul > .left_menu > .submenu > li > a:hover {
+  /* submenu에 마우스 올리면 배경색 텍스트색 바뀌기 */
+  background-color: black;
+  color: white;
+}
+
+/* right_menu */
+header > .top > .right_menu {
+  display: flex;
+  width: 300px;
+  font-size: 12px;
+}
+
+header > .top > .right_menu > ul {
+  display: flex; /* ul 리스트로 된 각 메뉴 한줄로 보이게 하기 */
+}
+
+header > .top > .right_menu > ul > .r_menu {
+  width: 50px; /* 각각 메뉴 width 50px  */
+  line-height: 100px; /* 텍스트 세로 중앙 정렬을 위한 line-height 설정*/
+  overflow: hidden;
+}
+
+header > .top > .right_menu > ul > .r_menu > a {
+  position: relative;
+}
+
+header > .top > .right_menu > ul > .r_menu img {
+  vertical-align: middle; /* vertical-align으로 logo img 가운데 정렬 */
+}
+
+header > .top > input[id*="search_bar"] {
+  display: none;
+}
+
+header > .top label[for*="search_bar"] {
+  cursor: pointer;
+}
+
+header > .top > input[id="open_search_bar"]:checked ~ .search_bar {
+  display: block;
+}
+
+header > .top > input[id="close_search_bar"]:checked ~ .search_bar {
+  display: none;
+}
+
+header > .top > .search_bar {
+  display: none;
+  width: 1600px;
+  height: 100%;
+  background-color: #20252c;
+  line-height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 4;
+}
+
+header > .top > .search_bar > input {
+  font-size: 20px;
+  color: #ffffff;
+  border-style: none;
+  border-bottom: solid #37414f 1px;
+  background-color: transparent;
+  line-height: 100%;
+  width: 600px;
+  height: 50px;
+  margin-top: 15px;
+  caret-color: oldlace;
+}
+
+header > .top > .search_bar > input:focus {
+  outline: none;
+}
+
+header > .top > .search_bar > img {
+  vertical-align: middle;
+}
+
+header > .top > .search_bar > label > span {
+  color: white;
+  font-size: 40px;
+  font-weight: 800;
+  position: relative;
+  top: 12px;
+  left: 425px;
+}
+
+/* 장바구니 숫자 (hoopcity 코드 가져옴) */
+header > .top > .right_menu > ul > .r_menu > a > span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; /* 둥근 모양에 박스 만들기 */
+  background: #99001b;
+  text-align: center;
+  line-height: 20px;
+  font-size: 10px;
+  color: #fff;
+  position: relative;
+  top: -50px;
+  left: 25px;
+}
+/*--------------------- header end ---------------------*/
+
+.contents {
+  width: 1600px;
+  margin: 180px auto;
+}
+
+.contents > .goods_list_item_tit {
+  text-align: center;
+  margin-bottom: 70px; /* list_item_category와의 간격 */
+}
+
+.contents > .goods_list_item_tit > h2 {
+  font-size: 40px;
+  color: #000;
+  font-weight: 600;
+}
+
+.contents > .goods_list_item_tit > ul > li {
+  display: inline-block; /* 가로정렬 */
+  padding: 10px 0; /* JODAN과의 간격 */
+}
+
+.contents > .goods_list_item_tit > ul > li > em {
+  font-size: 17px;
+}
+
+.contents > .goods_list_item_tit > ul > li > em > a {
+  color: #a1a1a1;
+}
+
+.contents > .goods_list_item_tit > ul > li > span {
+  display: inline-block;
+  padding: 0 16px;
+}
+
+.contents > .goods_list_item_tit > ul > li > span > img {
+  vertical-align: middle; /* 수직 정렬 */
+  margin-top: -2px;
+}
+
+.contents > .goods_list_item_tit > ul > li > p {
+  color: #555;
+  font-size: 14px;
+}
+
+.contents > .list_item_category {
+  text-align: center;
+  border-top: 1px solid #efefef;
+}
+
+.contents > .list_item_category > ul > li {
+  margin: 20px 10px; /* 위, 양옆 간격 */
+  display: inline-block;
+}
+
+.contents > .list_item_category > ul > li > a {
+  font-size: 20px;
+  color: #555;
+}
+
+.contents > .banner {
+  margin: 0px auto;
+}
+
+.contents > .banner2 {
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.contents > .banner2 > img {
+  width: 250px;
+  height: 250px;
+}
+
+.contents > .banner2 > .img > p {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1;
+  padding-top: 35px;
+  color: #333;
+  text-align: center;
+}
+
+/* --------------------- footer ------------------------- */
+
+.footer {
+  width: 1600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer > .top {
+  background: #555;
+  padding: 44px 0 40px;
+}
+
+.footer > .top > p {
+  font-size: 15px;
+  color: #f8f8f8 !important;
+}
+
+.footer > .top > h1 {
+  font-size: 35px;
+  color: #f8f8f8;
+}
+
+.footer > .top > .f_menu1 {
+  padding-top: 8px;
+}
+
+.footer > .top > .f_menu1 > a {
+  display: inline-block;
+  border: 1px solid #cbcbcb;
+  border-radius: 5px; /* 모서리 둥글게 */
+  padding: 20px;
+  width: 180px;
+  line-height: 17px;
+  font-size: 14px;
+  color: #f8f8f8;
+  margin: 0 5px;
+  transition: all 0.25s;
+}
+
+.footer > .bottom {
+  background: #333;
+  color: #a4a4a4;
+  padding: 40px 0 42px;
+}
+
+.footer > .bottom > .sns > li {
+  margin: 0 5px;
+  display: inline-block;
+}
+
+.footer > .bottom > .sns > li > img {
+  width: 50px;
+  height: 50px;
+}
+
+.footer > .bottom > .sns > li > a {
+  display: block;
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  background: #b2b2b2;
+  line-height: 47px;
+}
+
+.footer > .bottom > .f_menu2 {
+  padding-top: 24px;
+}
+
+.footer > .bottom > .f_menu2 > a {
+  display: inline-block;
+  padding: 0 8px;
+  font-size: 14px;
+  color: #b6b6b6;
+}
+
+.footer > .bottom > .info > h1 {
+  font-size: 16px;
+  font-weight: 700;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: #b5b5b5;
+}
+
+.footer > .bottom > .info > p {
+  font-size: 14px;
+  color: #b5b5b5;
+  line-height: 1.8;
+}
+
+.footer > .bottom > .info > .copy {
+  padding-top: 11px;
+  color: #b5b5b5;
+}
+
+/* --------------------- footer ------------------------- */
