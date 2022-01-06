@@ -197,13 +197,16 @@ header > .top > .right_menu > ul > .r_menu > a > span {
 }
 /*--------------------- header end ---------------------*/
 
+/*--------------------- contents start ---------------------*/
 .contents {
   width: 1600px;
-  margin: 180px auto;
+  margin: 0 auto;
 }
 
+/*--------------------- goods_list_item_tit ---------------------*/
 .contents > .goods_list_item_tit {
   text-align: center;
+  margin-top: 150px;
   margin-bottom: 70px; /* list_item_category와의 간격 */
 }
 
@@ -240,10 +243,15 @@ header > .top > .right_menu > ul > .r_menu > a > span {
   color: #555;
   font-size: 14px;
 }
+/*--------------------- goods_list_item_tit ---------------------*/
 
+/*--------------------- list_item_category ---------------------*/
 .contents > .list_item_category {
   text-align: center;
-  border-top: 1px solid #efefef;
+}
+
+.contents > .list_item_category > hr {
+  border-top: 1px solid #efefef; /* 줄긋기 */
 }
 
 .contents > .list_item_category > ul > li {
@@ -255,7 +263,9 @@ header > .top > .right_menu > ul > .r_menu > a > span {
   font-size: 20px;
   color: #555;
 }
+/*--------------------- list_item_category ---------------------*/
 
+/*--------------------- banner ---------------------*/
 .contents > .banner {
   margin: 0px auto;
 }
@@ -279,12 +289,103 @@ header > .top > .right_menu > ul > .r_menu > a > span {
   color: #333;
   text-align: center;
 }
+/*--------------------- banner ---------------------*/
+
+/*--------------------- goods_pick_list ---------------------*/
+.contents > .goods_pick_list {
+  display: flex;
+  margin-top: 90px;
+  margin-bottom: 60px;
+}
+
+.contents > .goods_pick_list > .list_left {
+  width: 1200px;
+  font-size: 16px;
+  color: #555;
+  display: flex;
+}
+
+.contents > .goods_pick_list > .list_left > p > span {
+  color: #000;
+  font-weight: 600;
+  padding-left: 12px;
+}
+
+.contents > .goods_pick_list > .list_right {
+  width: 400px;
+  padding-left: 100px;
+}
+
+.contents > .goods_pick_list > .list_right > ul {
+  display: flex;
+}
+
+.contents > .goods_pick_list > .list_right > ul > li {
+  font-size: 16px;
+  color: #555;
+}
+
+.contents > .goods_pick_list > .list_right > ul > li > a {
+  padding: 0 0 0 15px;
+}
+/*--------------------- goods_pick_list ---------------------*/
+/*--------------------- contents ---------------------*/
+
+/*--------------------- jordan_goods ---------------------*/
+.jordan_goods {
+  width: 1600px;
+  height: 2500px;
+  margin: 0 auto;
+}
+
+.jordan_goods > .jg_list {
+  text-align: center;
+  float: left;
+}
+
+.jordan_goods > .jg_list > img {
+  width: 390px;
+  height: 390px;
+}
+
+.jordan_goods > .jg_list > h3 {
+  color: #7a000c;
+  font-size: 15px;
+  margin: 15px 0 15px 0;
+}
+/*--------------------- jordan_goods ---------------------*/
+
+/*--------------------- pagination ---------------------*/
+.pagination {
+  text-align: center;
+}
+
+.pagination > ul {
+  margin-bottom: 100px;
+}
+
+.pagination > ul > li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.pagination > ul > li > span {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 5px;
+  width: 40px;
+  font-size: 20px;
+}
+
+.pagination > ul > li > a > span {
+  color: #888;
+}
+/*--------------------- pagination ---------------------*/
 
 /* --------------------- footer ------------------------- */
 
 .footer {
-  width: 1600px;
-  margin: 0 auto;
+  margin: 150px auto;
   text-align: center;
 }
 
